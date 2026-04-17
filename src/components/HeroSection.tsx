@@ -40,7 +40,7 @@ const HeroSection = ({ onRequestQuote }: HeroSectionProps) => {
           <motion.img
             key={currentBanner}
             src={banners[currentBanner]}
-            alt="Banner Henrique Cell"
+            alt="Banner Gyn Store"
             className="absolute inset-0 w-full h-full object-cover"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -56,11 +56,11 @@ const HeroSection = ({ onRequestQuote }: HeroSectionProps) => {
       <div className="px-5 -mt-12 relative z-10">
         <div className="flex items-end gap-4">
           <div className="w-24 h-24 rounded-2xl border-4 border-background overflow-hidden gradient-card glow-box-primary">
-            <img src={logoHC} alt="Henrique Cell" width={96} height={96} className="w-full h-full object-cover" />
+            <img src={logoHC} alt="Gyn Store" width={96} height={96} className="w-full h-full object-cover" />
           </div>
           <div className="pb-1 flex-1">
             <div className="flex items-center gap-1.5">
-              <h1 className="text-xl font-bold text-foreground">Henrique Cell</h1>
+              <h1 className="text-xl font-bold text-foreground">Gyn Store</h1>
               <BadgeCheck className="w-5 h-5 text-primary fill-primary/20" />
             </div>
             <div className="flex flex-col">

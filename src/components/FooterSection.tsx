@@ -15,7 +15,7 @@ const FooterSection = () => (
       </div>
       <div className="h-px bg-border mb-3" />
       <p className="text-xs text-muted-foreground">
-        © {new Date().getFullYear()} <span className="text-gradient font-semibold">Henrique Cell</span>. Todos os direitos reservados.
+        © {new Date().getFullYear()} <span className="text-gradient font-semibold">Gyn Store</span>. Todos os direitos reservados.
       </p>
       <p className="text-[10px] text-muted-foreground/60 mt-1">CNPJ: 00.000.000/0001-00</p>
     </div>

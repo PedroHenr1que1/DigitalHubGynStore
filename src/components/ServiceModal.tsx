@@ -128,7 +128,7 @@ const ServiceModal = ({ open: controlledOpen, onOpenChange, showTrigger = true }
 
                     <div className="flex gap-2 mt-3">
                       <a
-                        href={`https://wa.me/${att.phone}?text=Olá ${att.name}! Vim pelo link da Henrique Cell.`}
+                        href={`https://wa.me/${att.phone}?text=Olá ${att.name}! Vim pelo link da Gyn Store.`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg gradient-primary text-primary-foreground text-sm font-medium"

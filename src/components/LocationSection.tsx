@@ -32,7 +32,7 @@ const LocationSection = () => {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Mapa Henrique Cell"
+          title="Mapa Gyn Store"
         />
 
         <div className="bg-card p-4">
