@@ -97,7 +97,7 @@ const ReviewsSection = () => {
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-full gradient-primary flex items-center justify-center text-primary-foreground text-sm font-bold">
+                      <div className="w-10 h-10 rounded-md bg-secondary border border-border flex items-center justify-center text-foreground text-sm font-bold shadow-sm">
                         {r.name[0]}
                       </div>
                       <div>
@@ -116,8 +116,8 @@ const ReviewsSection = () => {
                   </div>
                   <p className="text-sm text-foreground/80 leading-relaxed italic">"{r.text}"</p>
                 </div>
-                <div className="mt-4">
-                  <span className="inline-flex items-center gap-1.5 text-[10px] font-medium bg-primary/10 text-primary px-2.5 py-1 rounded-full border border-primary/10">
+                <div className="mt-4 flex flex-wrap gap-2 items-center justify-between">
+                  <span className="inline-flex items-center gap-1.5 text-[10px] font-medium bg-secondary/50 text-foreground/70 px-2 py-1.5 rounded-md border border-border/50">
                     <ShoppingBag className="w-3 h-3" />
                     {r.bought}
                   </span>

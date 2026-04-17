@@ -71,22 +71,22 @@ const ProductCarousel = () => {
       <h2 className="font-bold text-foreground mb-4">Catálogo de Produtos</h2>
 
       {/* Category tabs */}
-      <div className="flex gap-2 mb-6 overflow-x-auto scrollbar-hide">
+      <div className="flex gap-2 mb-4 overflow-x-auto scrollbar-hide">
         {categories.map((cat) => {
           const Icon = cat.icon;
           return (
             <button
-              key={cat.label}
-              onClick={() => setActiveCategory(cat.label)}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all duration-300 ${
-                activeCategory === cat.label
-                   ? "gradient-primary text-primary-foreground glow-box-primary scale-105"
-                  : "bg-card border border-border text-muted-foreground hover:border-primary/30"
-              }`}
-            >
-              <Icon className="w-4 h-4" />
-              {cat.label}
-            </button>
+               key={cat.label}
+               onClick={() => setActiveCategory(cat.label)}
+               className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all duration-300 whitespace-nowrap ${
+                 activeCategory === cat.label
+                   ? "bg-primary text-primary-foreground scale-[1.02]"
+                   : "bg-secondary/50 text-muted-foreground hover:bg-secondary/70"
+               }`}
+             >
+               <Icon className="w-4 h-4" />
+               {cat.label}
+             </button>
           );
         })}
       </div>
@@ -102,34 +102,32 @@ const ProductCarousel = () => {
         <CarouselContent className="-ml-3">
           {filtered.map((product, i) => (
             <CarouselItem key={i} className="pl-3 basis-[75%] sm:basis-[60%]">
-              <div className="bg-card border border-border rounded-[2rem] p-4 flex flex-col h-full group hover:border-primary/20 transition-all duration-500 shadow-sm">
-                <div className="relative aspect-square w-full mb-4 rounded-3xl overflow-hidden bg-secondary/50">
+              <div className="bg-card border border-border rounded-xl p-3.5 flex flex-col h-full group hover:border-primary/40 transition-colors shadow-sm relative overflow-hidden">
+                <div className="relative aspect-square w-full mb-3 rounded-lg overflow-hidden bg-secondary/30 border border-border/50">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
                   {product.badge && (
-                    <div className="absolute top-3 left-3 bg-primary/90 backdrop-blur-md text-primary-foreground text-[9px] font-black uppercase tracking-tighter px-2 py-1 rounded-md">
+                    <div className="absolute top-2 left-2 bg-primary text-primary-foreground text-[10px] font-bold uppercase px-2 py-1 rounded">
                       {product.badge}
                     </div>
                   )}
                 </div>
                 
-                <div className="flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3 className="font-bold text-foreground text-sm line-clamp-1 group-hover:text-primary transition-colors">
-                      {product.name}
-                    </h3>
-                  </div>
+                <div className="flex-1 flex flex-col justify-end">
+                  <h3 className="font-bold text-foreground text-sm line-clamp-2 leading-tight mb-3">
+                    {product.name}
+                  </h3>
                   
                   <button 
                     onClick={() => window.open(`https://wa.me/556285177744?text=Olá! Gostaria de saber mais sobre ${product.name}`, "_blank")}
-                    className="mt-4 w-full py-2.5 rounded-xl bg-primary/10 text-primary text-[11px] font-bold flex items-center justify-center gap-2 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                    className="w-full py-2.5 rounded-lg bg-primary/10 text-primary text-xs font-bold flex items-center justify-center gap-1.5 hover:bg-primary hover:text-primary-foreground transition-colors"
                   >
                     <ShoppingCart className="w-3.5 h-3.5" />
-                    Ver Detalhes
+                    Eu Quero
                   </button>
                 </div>
               </div>

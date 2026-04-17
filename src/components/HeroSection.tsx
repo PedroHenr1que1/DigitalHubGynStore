@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BadgeCheck, MessageCircle, MapPin, Star } from "lucide-react";
-import logoHC from "@/assets/HenriqueCellLogo.png";
-import banner1 from "@/assets/banner-1.jpg";
-import banner2 from "@/assets/banner-2.jpg";
-import banner3 from "@/assets/banner-3.png";
+import logo from "@/assets/Logo.jpeg";
+import banner1 from "@/assets/banner-1.jpeg";
+import banner2 from "@/assets/banner-2.jpeg";
+import banner3 from "@/assets/banner-3.jpeg";
 
 const banners = [banner1, banner2, banner3];
 
@@ -56,7 +56,7 @@ const HeroSection = ({ onRequestQuote }: HeroSectionProps) => {
       <div className="px-5 -mt-12 relative z-10">
         <div className="flex items-end gap-4">
           <div className="w-24 h-24 rounded-2xl border-4 border-background overflow-hidden gradient-card glow-box-primary">
-            <img src={logoHC} alt="Gyn Store" width={96} height={96} className="w-full h-full object-cover" />
+            <img src={logo} alt="Gyn Store" width={96} height={96} className="w-full h-full object-cover" />
           </div>
           <div className="pb-1 flex-1">
             <div className="flex items-center gap-1.5">
@@ -64,10 +64,10 @@ const HeroSection = ({ onRequestQuote }: HeroSectionProps) => {
               <BadgeCheck className="w-5 h-5 text-primary fill-primary/20" />
             </div>
             <div className="flex flex-col">
-              <p className="text-sm font-medium text-foreground/80">Soluções em Smartphones</p>
+              <p className="text-sm font-medium text-foreground/80">Celulares novos e semi novos</p>
               <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-primary flex items-center gap-1">
                 <span className="w-1 h-1 rounded-full bg-primary" />
-                Assistência Técnica Especializada
+                Assistência Técnica e venda
               </span>
             </div>
           </div>
@@ -75,23 +75,9 @@ const HeroSection = ({ onRequestQuote }: HeroSectionProps) => {
 
         {/* Status + Info */}
         <div className="mt-5 flex flex-wrap items-center gap-3">
-          <span
-            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold ${
-              open
-                ? "bg-success/15 text-success"
-                : "bg-destructive/15 text-destructive"
-            }`}
-          >
-            <span className={`w-2 h-2 rounded-full ${open ? "bg-success animate-pulse" : "bg-destructive"}`} />
-            {open ? "Aberto agora" : "Fechado"}
-          </span>
           <span className="text-xs text-muted-foreground inline-flex items-center gap-1 bg-muted/50 px-2 py-0.5 rounded-md">
             <MapPin className="w-3 h-3" />
-            Goiânia, GO - <span className="text-foreground font-bold italic ml-0.5">Stand 260 e 261</span>
-          </span>
-          <span className="text-xs text-muted-foreground inline-flex items-center gap-1">
-            <Star className="w-3 h-3 text-warning fill-warning" />
-            4.9
+            Camelódromo Campinas 2 - <span className="text-foreground font-bold italic ml-0.5">Stand 263/264</span>
           </span>
         </div>
 
@@ -104,29 +90,6 @@ const HeroSection = ({ onRequestQuote }: HeroSectionProps) => {
           <MessageCircle className="w-5 h-5" />
           Solicitar Orçamento
         </motion.button>
-
-        {/* Reparo Destaque */}
-        <div className="mt-6 grid grid-cols-2 gap-3">
-          <div className="bg-card backdrop-blur-xl border border-border rounded-2xl p-3.5 flex flex-col gap-2 shadow-sm">
-            <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-              <BadgeCheck className="w-4 h-4 text-primary" />
-            </div>
-            <div>
-              <p className="text-[11px] font-bold text-foreground">Peças Originais</p>
-              <p className="text-[9px] text-muted-foreground leading-tight mt-0.5">Garantia total em todos os reparos.</p>
-            </div>
-          </div>
-          <div className="bg-primary/5 backdrop-blur-xl border border-primary/20 rounded-2xl p-3.5 flex flex-col gap-2 relative overflow-hidden group shadow-sm">
-            <div className="absolute -right-2 -top-2 w-12 h-12 bg-primary/10 rounded-full blur-xl group-hover:bg-primary/20 transition-colors" />
-            <div className="w-8 h-8 rounded-lg bg-primary text-primary-foreground flex items-center justify-center shadow-lg shadow-primary/20">
-              <Star className="w-4 h-4 fill-current" />
-            </div>
-            <div>
-              <p className="text-[11px] font-bold text-primary">Técnica Avançada</p>
-              <p className="text-[9px] text-primary/70 leading-tight mt-0.5">Especialistas em Apple e Android.</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

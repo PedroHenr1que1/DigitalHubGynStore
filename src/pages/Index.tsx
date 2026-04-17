@@ -5,6 +5,8 @@ import ProductCarousel from "@/components/ProductCarousel";
 import ReviewsSection from "@/components/ReviewsSection";
 import LocationSection from "@/components/LocationSection";
 import SocialLinks from "@/components/SocialLinks";
+import PaymentSection from "@/components/PaymentSection";
+import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
@@ -21,8 +23,10 @@ const Index = () => {
         <BusinessHours />
         <TradeInBanner />
         <ProductCarousel />
-        <ReviewsSection />
+        <PaymentSection />
         <LocationSection />
+        <FAQSection />
+        <ReviewsSection />
         <SocialLinks />
         <FooterSection />
       </div>

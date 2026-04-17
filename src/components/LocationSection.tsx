@@ -2,10 +2,10 @@ import { useState } from "react";
 import { MapPin, Navigation, Copy, Check, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 
-const ADDRESS = "Hiper Camelódromo OK - Stand 260 e 261, Goiânia - GO";
-const MAP_EMBED = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.8248!2d-49.2882704!3d-16.674159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef3f3bd3069e1%3A0x4a9a2de2045d7456!2sHiper%20Camel%C3%B3dromo%20OK!5e0!3m2!1spt-BR!2sbr!4v1713237800000";
-const GOOGLE_MAPS_URL = "https://www.google.com/maps/dir/?api=1&destination=-16.6741642,-49.2856955";
-const WAZE_URL = "https://waze.com/ul?ll=-16.6741642,-49.2856955&navigate=yes";
+const ADDRESS = "Camelódromo Campinas 2 Av. Anhanguera,\nSt. Campinas, Goiânia - GO";
+const MAP_EMBED = "https://maps.google.com/maps?q=Camel%C3%B3dromo%20Campinas%202,%20Av.%20Anhanguera,%207840&t=&z=16&ie=UTF8&iwloc=&output=embed";
+const GOOGLE_MAPS_URL = "https://www.google.com/maps/dir/?api=1&destination=Camelódromo+Campinas+2,+Av.+Anhanguera,+7840,+Goiânia+-+GO";
+const WAZE_URL = "https://waze.com/ul?q=Camelódromo%20Campinas%202%20Goiânia&navigate=yes";
 
 const LocationSection = () => {
   const [copied, setCopied] = useState(false);
@@ -23,7 +23,7 @@ const LocationSection = () => {
         Localização
       </h2>
 
-      <div className="rounded-xl overflow-hidden border border-border shadow-sm">
+      <div className="bg-card border border-border shadow-sm rounded-xl overflow-hidden">
         <iframe
           src={MAP_EMBED}
           width="100%"
@@ -35,8 +35,8 @@ const LocationSection = () => {
           title="Mapa Gyn Store"
         />
 
-        <div className="bg-card p-4">
-          <p className="text-sm text-muted-foreground mb-3">{ADDRESS}</p>
+        <div className="p-5">
+          <p className="text-sm text-foreground/80 mb-4 whitespace-pre-line">{ADDRESS}</p>
 
           <div className="flex gap-2">
             <a
