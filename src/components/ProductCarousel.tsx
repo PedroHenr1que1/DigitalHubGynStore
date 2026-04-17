@@ -31,9 +31,15 @@ const products: Product[] = [
   { name: "Samsung", category: "Marcas", badge: "Novo", image: productSamsung },
   { name: "iPhone", category: "Marcas", badge: "Top", image: productIphone },
   { name: "Xiaomi", category: "Marcas", image: productXiaomi },
+  { name: "Redmi", category: "Marcas", image: productXiaomi },
   { name: "POCO", category: "Marcas", image: productIphone },
   { name: "AirPods", category: "Acessórios", image: productAirpods },
+  { name: "JBL", category: "Acessórios", image: productAirpods },
+  { name: "Powerbanks", category: "Acessórios", image: productCharger },
+  { name: "Smartwatches", category: "Acessórios", image: productAirpods },
   { name: "Carregadores", category: "Acessórios", image: productCharger },
+  { name: "Suportes", category: "Acessórios", image: productCharger },
+  { name: "Microfones", category: "Acessórios", image: productAirpods },
   { name: "Fones", category: "Acessórios", image: productAirpods },
   { name: "Película de Vidro", category: "Películas", image: productCases },
   { name: "Película de Privacidade", category: "Películas", image: productCases },
@@ -123,11 +129,11 @@ const ProductCarousel = () => {
                   </h3>
                   
                   <button 
-                    onClick={() => window.open(`https://wa.me/556285177744?text=Olá! Gostaria de saber mais sobre ${product.name}`, "_blank")}
-                    className="w-full py-2.5 rounded-lg bg-primary/10 text-primary text-xs font-bold flex items-center justify-center gap-1.5 hover:bg-primary hover:text-primary-foreground transition-colors"
+                    onClick={() => window.open(`https://wa.me/556285177744?text=Olá! Gostaria de verificar a disponibilidade de: ${product.name}`, "_blank")}
+                    className="w-full py-2.5 rounded-lg bg-primary/10 text-primary text-[10px] font-bold flex items-center justify-center gap-1.5 hover:bg-primary hover:text-primary-foreground transition-colors"
                   >
                     <ShoppingCart className="w-3.5 h-3.5" />
-                    Eu Quero
+                    Verificar disponibilidade
                   </button>
                 </div>
               </div>

@@ -13,28 +13,20 @@ interface Attendant {
 
 const attendants: Attendant[] = [
   {
-    name: "Henrique",
-    phone: "5585999999999",
+    name: "Fábio",
+    phone: "556299848181",
     specialty: "Vendas & Orçamentos",
     online: true,
     avgResponse: "~5 min",
-    avatar: "H",
+    avatar: "F",
   },
   {
-    name: "Lucas",
-    phone: "5585988888888",
-    specialty: "Assistência Técnica Especializada",
+    name: "Matheus",
+    phone: "556299848181",
+    specialty: "Atendimento & Suporte",
     online: true,
-    avgResponse: "~10 min",
-    avatar: "L",
-  },
-  {
-    name: "Amanda",
-    phone: "5585977777777",
-    specialty: "Acessórios & Capinhas",
-    online: false,
-    avgResponse: "~15 min",
-    avatar: "A",
+    avgResponse: "~5 min",
+    avatar: "M",
   },
 ];
 
@@ -111,11 +103,6 @@ const ServiceModal = ({ open: controlledOpen, onOpenChange, showTrigger = true }
                         <p className="font-semibold text-foreground">{att.name}</p>
                         <div className="flex items-center gap-1.5">
                           <p className="text-xs text-primary font-bold">{att.specialty}</p>
-                          {att.name === "Lucas" && (
-                            <span className="text-[10px] bg-primary/10 text-primary px-1.5 py-0.5 rounded-md border border-primary/20">
-                              Expert
-                            </span>
-                          )}
                         </div>
                         <div className="flex items-center gap-1 mt-0.5 text-xs text-muted-foreground">
                           <Clock className="w-3 h-3" />
